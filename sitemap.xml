@@ -18,4 +18,10 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+ <url>
+    <loc>https://nooneweone.org/aii_vs_asi_the_complete_manifest.html</loc>
+    <lastmod>2025-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>  
 </urlset>
