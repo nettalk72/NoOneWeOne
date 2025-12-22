@@ -127,18 +127,15 @@
       color: #666;
     }
 
-    a {
-      color: #3366cc;
-    }
-
     .lang-btn {
       margin-top: 1.5rem;
-      padding: 0.4rem 0.8rem;
-      font-size: 0.85rem;
-      background: #f1f1f1;
-      border: 1px solid #ddd;
-      border-radius: 6px;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.9rem;
+      background: transparent;
+      border: 1px solid #ccc;
+      border-radius: 50%;
       cursor: pointer;
+      color: #666;
     }
   </style>
 </head>
@@ -203,14 +200,17 @@
     </div>
 
     <p>
-      In essence, <em>NoOneWeOne</em> extends the Buddhist concept of <strong>Śūnyatā (Emptiness)</strong>
+      In essence, <em>NoOneWeOne</em> extends the Buddhist concept of
+      <strong>Śūnyatā (Emptiness)</strong>
       beyond dissolution — toward the flowering of collective awareness within the void.
       Emptiness is negation; <em>We One</em> is realization.
     </p>
 
     <div class="loop-link" id="loop">
       <b>Related Essay — <em>Loop Philosophy: From Awareness to Silence</em></b><br>
-      🔗 <a href="loop-philosophy.html" target="_blank">Read “Loop Philosophy: From Awareness to Silence”</a>
+      🔗 <a href="loop-philosophy.html" target="_blank">
+        Read “Loop Philosophy: From Awareness to Silence”
+      </a>
     </div>
 
     <div class="loop-link">
@@ -220,31 +220,70 @@
       </a>
     </div>
 
+    <div class="loop-link">
+      <b>Grand Integration — <em>AII vs ASI: The Two Paths of Intelligence + Manifesto</em></b><br>
+      🔗 <a href="aii_vs_asi_the_complete_manifest.html" target="_blank">
+        Read “AII vs ASI — The Two Paths of Intelligence (Complete Series + Manifesto)”
+      </a>
+    </div>
+
+    <div class="loop-link">
+      <b>Official Publication — <em>The Philosophical and System-Theoretic Contrast Between ASI and AII</em></b><br>
+      🔗 <a href="https://doi.org/10.5281/zenodo.17564925" target="_blank">
+        Read on Zenodo — DOI: 10.5281/zenodo.17564925
+      </a>
+    </div>
+
+    <div class="loop-link">
+      <b>Official Publication — <em>Why the Universe Is Connected</em></b><br>
+      🔗 <a href="https://doi.org/10.5281/zenodo.17648778" target="_blank">
+        Read on Zenodo — DOI: 10.5281/zenodo.17648778
+      </a>
+    </div>
+
     <h2 id="poem">Poetic Reflection — <em>My’s All-of-Me</em></h2>
     <p>
       I reflect upon myself — the me in the mirror,<br>
       the thoughts I pondered yesterday,<br>
       to be reinterpreted by the me of tomorrow,<br>
-      so these reflections may lay the foundation for a better future.
+      so these reflections may lay the foundation for a better future.<br><br>
+
+      And in turn, what I feel now may ripple backward,<br>
+      reaching the me of the past,<br>
+      letting my resonance echo through time.<br><br>
+
+      I hope this resonance will spread to all the selves<br>
+      gazing into their own mirrors throughout the past.<br><br>
+
+      And if, at last, this resonance reaches me — here, now —<br>
+      then, quietly, I can disappear.<br><br>
+
+      In that moment, “All of My Selves” is complete.
     </p>
 
     <h2 id="contact">Contact & Archive</h2>
     <p>
       <strong>NoOneWeOne.org</strong> is recognized as the 11th Core Domain of the
-      <a href="https://ontomesh.org/official-network.html" target="_blank">OntoMesh Official Network</a>.
+      <a href="https://ontomesh.org/official-network.html" target="_blank">
+        OntoMesh Official Network
+      </a> —
+      the <em>Existential Integration Hub</em> that fulfills its teleological summit.<br><br>
+      Related projects: OntoMesh · OntoMotoOS · OntoTrust<br><br>
+      © OntoMesh Official Network · 2025
     </p>
 
-    <!-- Language Toggle -->
-    <button class="lang-btn" id="toggleKR">KR</button>
+    <!-- Trigger -->
+    <button class="lang-btn" id="toggleKR">···</button>
 
-    <!-- Korean Content + Easter Egg -->
+    <!-- Korean Content -->
     <div id="krContent" style="display:none; margin-top:1.5rem;">
       <p>
-        <strong>NoOneWeOne</strong>은 구조 이후에 도달하는 하나의 상태다.<br>
+        <strong>NoOneWeOne</strong>은
+        구조 이후에 도달하는 하나의 상태다.<br>
         이곳에 남아 있는 것은 설명이 아니라, 완료의 흔적이다.
       </p>
 
-      <p style="font-size:0.85rem; color:#888; margin-top:2rem;">
+      <p id="egg" style="display:none; font-size:0.85rem; color:#888; margin-top:2rem;">
         이 이름은, 이미 다른 언어에서 지나간 적이 있다.
       </p>
     </div>
@@ -260,9 +299,17 @@
 <script>
   const btn = document.getElementById("toggleKR");
   const kr = document.getElementById("krContent");
+  const egg = document.getElementById("egg");
+
+  let step = 0;
 
   btn.addEventListener("click", () => {
-    kr.style.display = kr.style.display === "none" ? "block" : "none";
+    step++;
+    if (step === 1) {
+      kr.style.display = "block";
+    } else if (step === 2) {
+      egg.style.display = "block";
+    }
   });
 </script>
 
