@@ -194,12 +194,9 @@
 <body>
 
 <header>
-  <h1 class="logo"><img src="/nooneweone_mini.jpg"         
-         alt="NoOneWeOne symbol"
-         id="logoTrigger"
-         width="32"
-         height="32"
-         style="display:inline-block;" /> NoOneWeOne.org</h1>
+  <h1 class="logo"><img src="/nooneweone_mini.jpg"
+     alt="NoOneWeOne symbol"
+     id="logoTrigger"> NoOneWeOne.org</h1>
   <nav>
     <a href="#about">About</a>
     <a href="#definition">Definition</a>
@@ -390,6 +387,15 @@
   NoOne-WeOne awakens the being.”
 </footer>
 
+<!-- Logo Modal -->
+<div id="logoModal" class="modal">
+  <div class="modal-backdrop"></div>
+  <div class="modal-content">
+    <img src="/nooneweone.png"
+         alt="NoOneWeOne full logo">
+  </div>
+</div>
+  
 <script>
   const btn = document.getElementById("toggleKR");
   const kr = document.getElementById("krContent");
@@ -424,14 +430,7 @@
   });  
 </script>
 
-<!-- Logo Modal -->
-<div id="logoModal" class="modal">
-  <div class="modal-backdrop"></div>
-  <div class="modal-content">
-    <img src="/nooneweone.png"
-         alt="NoOneWeOne full logo">
-  </div>
-</div>
+
   
 </body>
 </html>
