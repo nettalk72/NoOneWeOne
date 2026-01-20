@@ -150,6 +150,43 @@
       height: 32px;
       display: block;
     }
+
+    /* Modal base */
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      z-index: 9999;
+    }
+    
+    /* Dim background */
+    .modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+    }
+    
+    /* Centered content */
+    .modal-content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .modal-content img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    }
+    
+    /* Cursor hint */
+    #logoTrigger {
+      cursor: pointer;
+    }    
     
   </style>
 </head>
@@ -159,6 +196,7 @@
 <header>
   <h1 class="logo"><img src="/nooneweone_mini.jpg"         
          alt="NoOneWeOne symbol"
+         id="logoTrigger"
          width="32"
          height="32"
          style="display:inline-block;" /> NoOneWeOne.org</h1>
@@ -367,7 +405,33 @@
       egg.style.display = "block";
     }
   });
+
+  const logo = document.getElementById("logoTrigger");
+  const modal = document.getElementById("logoModal");
+
+  logo.addEventListener("click", () => {
+    modal.style.display = "block";
+  });
+
+  modal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      modal.style.display = "none";
+    }
+  });  
 </script>
 
+<!-- Logo Modal -->
+<div id="logoModal" class="modal">
+  <div class="modal-backdrop"></div>
+  <div class="modal-content">
+    <img src="/nooneweone.png"
+         alt="NoOneWeOne full logo">
+  </div>
+</div>
+  
 </body>
 </html>
